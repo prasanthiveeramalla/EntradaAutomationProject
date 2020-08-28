@@ -57,6 +57,8 @@ public class MercuryRegisterPage {
 
 
 	}
-
+//Editing add new dumm lines
+	public void testMethod(){
+	}
 
 }
