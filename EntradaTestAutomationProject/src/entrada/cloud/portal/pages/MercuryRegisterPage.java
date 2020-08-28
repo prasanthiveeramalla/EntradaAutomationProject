@@ -35,28 +35,36 @@ public class MercuryRegisterPage {
 	public By fieldSuccessNotePart1=By.xpath("//b[contains(text(),'Note: Your user name is')]");
 	public By fieldSuccessNotePart2=By.xpath("//b[contains(text(),'lbnagar");
 	 */
-	public boolean EnterRegisterDetails(String FN, String LN, String phone, String email, String address, String city, String state, String postalCode, String country, String username, String pwd, String confmPwd) {
+	public void setRegisterDetails(String FN, String LN, String phone, String email, String address, String city, String state, String postalCode, String country, String username, String pwd, String confmPwd) {
 
-		WebActions actions=new WebActions();
-		actions.EnterValue(driver, register_FirstName, FN);
-		actions.EnterValue(driver, register_LastName, LN);
-		actions.EnterValue(driver, register_Phone, phone);
-		actions.EnterValue(driver, register_Email, email);
-		actions.EnterValue(driver, register_Address, address);
-		actions.EnterValue(driver, register_City, city);
-		actions.EnterValue(driver, register_State, state);
-		actions.EnterValue(driver, register_postalcode, postalCode);
-		actions.gf_SelectbyValue(driver, register_Country, country);
-		actions.EnterValue(driver, register_UserName, username);
-		actions.EnterValue(driver, register_Password, pwd);
-		actions.EnterValue(driver, register_ConfirmPassword, confmPwd);
-		actions.clickOnElement(driver, register_Submit);
-				
-		return actions.verifyElementExists(driver, register_mailSuccess);
-		//actions.verifyElementExists(driver, fieldSuccessNotePart1);
-
+		//WebActions actions=new WebActions();
+		//WebActions actions;
+		WebActions.EnterValue(driver, register_FirstName, FN);
+		WebActions.EnterValue(driver, register_LastName, LN);
+		WebActions.EnterValue(driver, register_Phone, phone);
+		WebActions.EnterValue(driver, register_Email, email);
+		WebActions.EnterValue(driver, register_Address, address);
+		WebActions.EnterValue(driver, register_City, city);
+		WebActions.EnterValue(driver, register_State, state);
+		WebActions.EnterValue(driver, register_postalcode, postalCode);
+		WebActions.gf_SelectbyValue(driver, register_Country, country);
+		WebActions.EnterValue(driver, register_UserName, username);
+		WebActions.EnterValue(driver, register_Password, pwd);
+		WebActions.EnterValue(driver, register_ConfirmPassword, confmPwd);
+		
 
 	}
+	
+	public  boolean RegisterSuccess(String FN, String LN, String phone, String email, String address, String city, String state, String postalCode, String country, String username, String pwd, String confmPwd) {
+
+		WebActions.clickOnElement(driver, register_Submit);
+		
+		return WebActions.verifyElementExists(driver, register_mailSuccess);
+		//actions.verifyElementExists(driver, fieldSuccessNotePart1);
+
+	}
+	
+	
 
 //Editing add new dumm lines
 	public void testMethod(){

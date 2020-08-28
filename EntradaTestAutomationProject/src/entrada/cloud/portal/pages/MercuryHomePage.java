@@ -55,28 +55,28 @@ public class MercuryHomePage {
 	
 	
 	public void testHeaderLinks() {
-		WebActions actions=new WebActions();
-		actions.verifyElementExists(driver,HeaderLinks_SignOn);
-		actions.verifyElementExists(driver,HeaderLinks_Register);
-		actions.verifyElementExists(driver,HeaderLinks_Support);
-		actions.verifyElementExists(driver,HeaderLinks_Contact);
+		//WebActions actions=new WebActions();
+		WebActions.verifyElementExists(driver,HeaderLinks_SignOn);
+		WebActions.verifyElementExists(driver,HeaderLinks_Register);
+		WebActions.verifyElementExists(driver,HeaderLinks_Support);
+		WebActions.verifyElementExists(driver,HeaderLinks_Contact);
 
 	}
 	public void testNavigationBarLinks() {
-		WebActions actions=new WebActions();
-		actions.verifyElementExists(driver,navigationBarLinks_Home);
-		actions.verifyElementExists(driver,navigationBarLinks_Flights);
-		actions.verifyElementExists(driver,navigationBarLinks_Hotels);
-		actions.verifyElementExists(driver,navigationBarLinks_CarRentals);
-		actions.verifyElementExists(driver,navigationBarLinks_Cruises);
-		actions.verifyElementExists(driver,navigationBarLinks_Destinations);
-		actions.verifyElementExists(driver,navigationBarLinks_Vacations);
+		//WebActions actions=new WebActions();
+		WebActions.verifyElementExists(driver,navigationBarLinks_Home);
+		WebActions.verifyElementExists(driver,navigationBarLinks_Flights);
+		WebActions.verifyElementExists(driver,navigationBarLinks_Hotels);
+		WebActions.verifyElementExists(driver,navigationBarLinks_CarRentals);
+		WebActions.verifyElementExists(driver,navigationBarLinks_Cruises);
+		WebActions.verifyElementExists(driver,navigationBarLinks_Destinations);
+		WebActions.verifyElementExists(driver,navigationBarLinks_Vacations);
 
 
 	}
 	public void clickHPRegisterLink() {
-		WebActions actions=new WebActions();
-		actions.clickOnElement(driver, HeaderLinks_Register);
+		//WebActions actions=new WebActions();
+		WebActions.clickOnElement(driver, HeaderLinks_Register);
 	}
 	
 	public void testTableData() {

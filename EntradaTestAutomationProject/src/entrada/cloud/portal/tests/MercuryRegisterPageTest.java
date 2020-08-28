@@ -17,16 +17,16 @@ public class MercuryRegisterPageTest {
 	
 	@BeforeMethod
 	public void Initialize() {
-		WebActions action=new WebActions();
-		driver=action.getDriver();
-		action.launchURL(driver,"http://demo.guru99.com/test/newtours/index.php");
+		//WebActions action=new WebActions();
+		driver=WebActions.getDriver();
+		WebActions.launchURL(driver,"http://demo.guru99.com/test/newtours/index.php");
 	}
 	@Test
 	public void testRegisterSuccess() {
 		MercuryHomePage mhpage=new MercuryHomePage(driver); 
 		mhpage.clickHPRegisterLink();
 		MercuryRegisterPage mrpage=new MercuryRegisterPage(driver);
-		boolean flag=mrpage.EnterRegisterDetails("ZFN", "ZLN", "98988888888", "dummy@yopmail.com", "Somajiguda", "Hyderabad", "Telengana", "500050", "INDIA", "zusername", "z1234*56", "z1234*56");
+		boolean flag=mrpage.RegisterSuccess("aZFN", "aZLN", "98988888888", "adummy@yopmail.com", "Somajiguda", "Hyderabad", "Telengana", "500050", "INDIA", "azusername", "z1234*56", "z1234*56");
 		common.Logger.assertEquals(flag+"", "true", "Verify registrations is successful", "");
 	}
 		

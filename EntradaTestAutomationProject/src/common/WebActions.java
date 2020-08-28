@@ -14,7 +14,7 @@ import org.testng.Reporter;
 
 public class WebActions {
 	
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		System.setProperty("webdriver.chrome.driver","webdrivers\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -24,19 +24,19 @@ public class WebActions {
 		return driver;
 				
 	}
-	public void launchURL(WebDriver driver, String url) {
+	public static void launchURL(WebDriver driver, String url) {
 		Reporter.log("Launching url: "+url , true);
 		waitForSomeTime(driver, 30);
 		driver.get(url);
 			
 		}
-	public void CloseDriver(WebDriver driver) {
+	public static void CloseDriver(WebDriver driver) {
 		driver.close();
 		
 		
 	}
 
-	public  boolean verifyElementExists(WebDriver driver,By locator) {
+	public static boolean verifyElementExists(WebDriver driver,By locator) {
 		try {
 			Reporter.log("Element locator :"+locator.toString());
 			waitForSomeTime(driver, 60);
@@ -50,7 +50,7 @@ public class WebActions {
 		}
 
 	}
-	public  void clickOnElement(WebDriver driver, By locator) {
+	public static  void clickOnElement(WebDriver driver, By locator) {
 		try {
 			waitForSomeTime(driver, 60);
 			WebElement element= driver.findElement(locator);
@@ -63,7 +63,7 @@ public class WebActions {
 
 	}
 
-	public  void EnterValue(WebDriver driver,By locator, String txt) {
+	public static  void EnterValue(WebDriver driver,By locator, String txt) {
 		try {
 			waitForSomeTime(driver, 60);
 			WebElement element= driver.findElement(locator);
@@ -78,12 +78,12 @@ public class WebActions {
 
 	
 	
-	public void  waitForSomeTime(WebDriver driver, long time){
+	public static void  waitForSomeTime(WebDriver driver, long time){
 		new WebDriverWait(driver, time).until(abc->((JavascriptExecutor)abc).executeScript("return document.readyState").equals("complete"));
 		
 	}
 	
-	public void gf_SelectbyValue(WebDriver driver,By locator, String val) {
+	public static void gf_SelectbyValue(WebDriver driver,By locator, String val) {
 		WebElement element= driver.findElement(locator);
 		Select dropDown=new Select(element);
 		dropDown.selectByValue(val);

@@ -13,36 +13,36 @@ public class MercuryHomePageTest {
 	private WebDriver driver;
 	@BeforeMethod
 	public void Initialize() {
-		WebActions action=new WebActions();
-		driver=action.getDriver();
-		action.launchURL(driver,"http://demo.guru99.com/test/newtours/index.php");
+		//WebActions action=new WebActions();
+		driver=WebActions.getDriver();
+		WebActions.launchURL(driver,"http://demo.guru99.com/test/newtours/index.php");
 	}
 
 	@Test
 	public void testHeaderLinks() {
 		MercuryHomePage mhpage=new MercuryHomePage(driver);
-		WebActions actions=new WebActions();
+		//WebActions actions=new WebActions();
 		//WebDriver driver = actions.getDriver();
-		actions.verifyElementExists(driver,mhpage.HeaderLinks_SignOn);
-		actions.verifyElementExists(driver,mhpage.HeaderLinks_Register);
-		actions.verifyElementExists(driver,mhpage.HeaderLinks_Support);
-		actions.verifyElementExists(driver,mhpage.HeaderLinks_Contact);
+		WebActions.verifyElementExists(driver,mhpage.HeaderLinks_SignOn);
+		WebActions.verifyElementExists(driver,mhpage.HeaderLinks_Register);
+		WebActions.verifyElementExists(driver,mhpage.HeaderLinks_Support);
+		WebActions.verifyElementExists(driver,mhpage.HeaderLinks_Contact);
 
 	}
 	
 	@Test
 	public void testNavigationBarLinks() {
 		MercuryHomePage mhpage=new MercuryHomePage(driver);
-		WebActions actions=new WebActions();
+	//	WebActions actions=new WebActions();
 		//WebDriver driver = actions.getDriver();
 		
-		actions.verifyElementExists(driver,mhpage.navigationBarLinks_Home);
-		actions.verifyElementExists(driver,mhpage.navigationBarLinks_Flights);
-		actions.verifyElementExists(driver,mhpage.navigationBarLinks_Hotels);
-		actions.verifyElementExists(driver,mhpage.navigationBarLinks_CarRentals);
-		actions.verifyElementExists(driver,mhpage.navigationBarLinks_Cruises);
-		actions.verifyElementExists(driver,mhpage.navigationBarLinks_Destinations);
-		actions.verifyElementExists(driver,mhpage.navigationBarLinks_Vacations);
+		WebActions.verifyElementExists(driver,mhpage.navigationBarLinks_Home);
+		WebActions.verifyElementExists(driver,mhpage.navigationBarLinks_Flights);
+		WebActions.verifyElementExists(driver,mhpage.navigationBarLinks_Hotels);
+		WebActions.verifyElementExists(driver,mhpage.navigationBarLinks_CarRentals);
+		WebActions.verifyElementExists(driver,mhpage.navigationBarLinks_Cruises);
+		WebActions.verifyElementExists(driver,mhpage.navigationBarLinks_Destinations);
+		WebActions.verifyElementExists(driver,mhpage.navigationBarLinks_Vacations);
 
 
 	}
