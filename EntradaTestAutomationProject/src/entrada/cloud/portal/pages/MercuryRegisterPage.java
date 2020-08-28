@@ -57,6 +57,9 @@ public class MercuryRegisterPage {
 
 
 	}
-
+//test by adding new method from local
+	public void testFromLocal() {
+		
+	}
 
 }
