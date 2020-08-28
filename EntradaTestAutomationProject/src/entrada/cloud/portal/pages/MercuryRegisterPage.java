@@ -57,9 +57,13 @@ public class MercuryRegisterPage {
 
 
 	}
-//test by adding new method from local
+
+//Editing add new dumm lines
+	public void testMethod(){
+
+	}
 	public void testFromLocal() {
-		
+	
 	}
 
 }
