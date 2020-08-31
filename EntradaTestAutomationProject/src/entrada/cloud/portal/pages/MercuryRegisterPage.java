@@ -56,7 +56,7 @@ public class MercuryRegisterPage {
 	}
 	
 	public  boolean RegisterSuccess(String FN, String LN, String phone, String email, String address, String city, String state, String postalCode, String country, String username, String pwd, String confmPwd) {
-
+		setRegisterDetails(FN, LN, phone, email, address, city, state, postalCode, country, username, pwd, confmPwd);
 		WebActions.clickOnElement(driver, register_Submit);
 		
 		return WebActions.verifyElementExists(driver, register_mailSuccess);
